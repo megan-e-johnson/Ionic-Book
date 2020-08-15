@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Table Of Contents</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let chapter of chapters">
+    <ion-item [routerDirection]="'root'" [routerLink]="[chapter.url]">
+      {{chapter.title}}
+    </ion-item>
+  </ion-list>
+  
+  <div id="toc"> 
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" size-sm>
+          <div>
+            <ion-button id="back0" shape="round" fill="outline" [routerDirection]="'root'" [routerLink]="['/home']">Back</ion-button>
+          </div>
+        </ion-col>
+        <ion-col size="12" size-sm>
+          <div>
+            <ion-button id="next" shape="round" fill="outline" [routerDirection]="'root'" [routerLink]="['/chapter1']">Next Page</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>   
+  </div>
+</ion-content>
